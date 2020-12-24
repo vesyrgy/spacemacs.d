@@ -79,6 +79,9 @@ This function should only modify configuration layer settings."
      ;; https://develop.spacemacs.org/layers/+lang/csv/README.html
      csv
 
+     ;; Deft for nvAlt-like search & file creation
+     (deft :variables deft-zetteldeft t)
+
      ;; For Spacemacs configuration files and packages
      emacs-lisp
 
@@ -375,16 +378,16 @@ It should only modify the values of Spacemacs settings."
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
 
-   dotspacemacs-themes '(doom-gruvbox-light
+   dotspacemacs-themes '(kaolin-valley-dark
                          doom-solarized-light
                          doom-sourcerer
-                         kaolin-valley-dark
                          doom-solarized-dark
                          spacemacs-light
                          spacemacs-dark)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
-   ;; `all-the-icons', `custom', `doom', `vim-powerline' and `vanilla'. The
+
+   ;; `all-the-icons', `[custom]', `doom', `vim-powerline' and `vanilla'. The
    ;; first three are spaceline themes. `doom' is the doom-emacs mode-line.
    ;; `vanilla' is default Emacs mode-line. `custom' is a user defined themes,
    ;; refer to the DOCUMENTATION.org for more info on how to create your own
@@ -700,7 +703,9 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
-
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;; Deft
+  (setq deft-directory "~/Documents/OrgMode")
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; Keeping Helm history clean

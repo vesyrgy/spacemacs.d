@@ -143,6 +143,7 @@ This function should only modify configuration layer settings."
 
      ;; Spacemacs Org mode
      (org :variables
+          org-startup-indented t
           org-enable-github-support t
           org-enable-bootstrap-support t
           org-enable-reveal-js-support t
@@ -876,7 +877,7 @@ before packages are loaded."
   ;;
   ;; Define the location of the file to hold tasks
   (with-eval-after-load 'org
-    (setq org-default-notes-file "~/Dropbox/todo-list.org"))
+    (setq org-default-notes-file "~/Documents/OrgMode/todo-list.org"))
   ;;
   ;; Define a kanban style set of stages for todo tasks
   (with-eval-after-load 'org

@@ -1629,6 +1629,8 @@ This function is called at the very end of Spacemacs initialization."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(after-save-hook
+   '(helm-swoop--clear-cache rmail-after-save-hook doom-modeline-update-vcs-text doom-modeline-update-vcs-icon doom-modeline-update-buffer-file-name org-roam-db-build-cache))
  '(org-capture-after-finalize-hook '(org-roam-db-build-cache))
  '(org-roam-db-update-idle-seconds 1)
  '(org-roam-db-update-method 'idle-timer)

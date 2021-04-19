@@ -707,10 +707,6 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  ;; Deft
-  (setq deft-directory "~/Documents/OrgMode")
-
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; Keeping Helm history clean
   (setq history-delete-duplicates t)
   (setq extended-command-history
@@ -1631,7 +1627,11 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  '(after-save-hook
    '(helm-swoop--clear-cache rmail-after-save-hook doom-modeline-update-vcs-text doom-modeline-update-vcs-icon doom-modeline-update-buffer-file-name org-roam-db-build-cache))
+ '(deft-directory "~/org-roam")
+ '(org-agenda-files
+   '("~/org-roam/" "~/Documents/OrgMode/" "~/org-roam/daily/" "~/org-roam/wantto/"))
  '(org-capture-after-finalize-hook '(org-roam-db-build-cache))
+ '(org-directory "~/org-roam/")
  '(org-roam-db-update-idle-seconds 1)
  '(org-roam-db-update-method 'idle-timer)
  '(package-selected-packages

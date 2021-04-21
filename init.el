@@ -1626,7 +1626,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(after-save-hook
-   '(helm-swoop--clear-cache rmail-after-save-hook doom-modeline-update-vcs-text doom-modeline-update-vcs-icon doom-modeline-update-buffer-file-name org-roam-db-build-cache))
+   '(helm-swoop-clear-cache rmail-after-save-hook doom-modeline-update-vcs-text doom-modeline-update-vcs-icon doom-modeline-update-buffer-file-name org-roam-db-build-cache))
  '(deft-directory "~/org-roam")
  '(org-agenda-files
    '("~/org-roam/" "~/Documents/OrgMode/" "~/org-roam/daily/" "~/org-roam/wantto/"))

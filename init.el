@@ -1345,3 +1345,58 @@ before packages are loaded."
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+(defun dotspacemacs/emacs-custom-settings ()
+  "Emacs custom settings.
+This is an auto-generated function, do not modify its content directly, use
+Emacs customize menu instead.
+This function is called at the very end of Spacemacs initialization."
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes '(kaolin-valley-dark))
+ '(custom-safe-themes
+   '("0769aa1641a0dcd5043e37ab22c401da838ff30b015da104c87cce1573d4c3ef" "d9a28a009cda74d1d53b1fbd050f31af7a1a105aa2d53738e9aa2515908cac4c" default))
+ '(evil-want-Y-yank-to-eol nil)
+ '(fci-rule-color "#504945")
+ '(jdee-db-active-breakpoint-face-colors (cons "#f0f0f0" "#a89984"))
+ '(jdee-db-requested-breakpoint-face-colors (cons "#f0f0f0" "#79740e"))
+ '(jdee-db-spec-breakpoint-face-colors (cons "#f0f0f0" "#928374"))
+ '(objed-cursor-color "#9d0006")
+ '(package-selected-packages
+   '(vmd-mode lsp-ui lsp-treemacs cfrs posframe lsp-origami origami keycast helm-lsp lsp-mode zetteldeft yasnippet-snippets yaml-mode xterm-color ws-butler writeroom-mode winum which-key web-mode web-beautify vterm volatile-highlights vi-tilde-fringe valign uuidgen use-package unkillable-scratch unicode-fonts undo-tree treemacs-projectile treemacs-persp treemacs-magit treemacs-icons-dired treemacs-evil toc-org terminal-here tagedit symon symbol-overlay string-inflection spaceline-all-the-icons smeargle slim-mode shell-pop scss-mode sass-mode restart-emacs ranger rainbow-mode rainbow-identifiers rainbow-delimiters pug-mode prettier-js popwin persistent-scratch pcre2el password-generator paradox ox-twbs ox-gfm overseer orgit org-superstar org-roam org-rich-yank org-re-reveal org-projectile org-present org-pomodoro org-mime org-journal org-download org-cliplink org-brain open-junk-file nodejs-repl nameless multi-term move-text mmm-mode markdown-toc magit-svn magit-section magit-gitflow macrostep lorem-ipsum livid-mode link-hint ligature kaolin-themes json-navigator json-mode js2-refactor js-doc indent-guide impatient-mode hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-purpose helm-projectile helm-org-rifle helm-org helm-mode-manager helm-make helm-ls-git helm-gitignore helm-git-grep helm-flx helm-descbinds helm-css-scss helm-company helm-cider helm-c-yasnippet helm-ag grip-mode graphviz-dot-mode google-translate golden-ratio gnuplot gitignore-templates github-search github-clone gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gist gh-md fuzzy forge font-lock+ flyspell-correct-helm flycheck-pos-tip flycheck-package flycheck-elsa flycheck-clj-kondo flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-vimish-fold evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-easymotion evil-cleverparens evil-args evil-anzu eshell-z eshell-prompt-extras esh-help emr emojify emoji-cheat-sheet-plus emmet-mode elisp-slime-nav editorconfig dumb-jump dotenv-mode doom-themes doom-modeline dired-quick-sort diminish diff-hl devdocs define-word csv-mode company-web company-statistics company-quickhelp company-emoji command-log-mode column-enforce-mode color-identifiers-mode clojure-snippets clean-aindent-mode cider-eval-sexp-fu centered-cursor-mode browse-at-remote auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile aggressive-indent adoc-mode ace-link ace-jump-helm-line ac-ispell))
+ '(pdf-view-midnight-colors (cons "#282828" "#fbf1c7"))
+ '(rustic-ansi-faces
+   ["#fbf1c7" "#9d0006" "#79740e" "#b57614" "#076678" "#b16286" "#427b58" "#282828"])
+ '(vc-annotate-background "#fbf1c7")
+ '(vc-annotate-color-map
+   (list
+    (cons 20 "#79740e")
+    (cons 40 "#8d7410")
+    (cons 60 "#a17512")
+    (cons 80 "#b57614")
+    (cons 100 "#b3620e")
+    (cons 120 "#b14e08")
+    (cons 140 "#af3a03")
+    (cons 160 "#af472e")
+    (cons 180 "#b0545a")
+    (cons 200 "#b16286")
+    (cons 220 "#aa415b")
+    (cons 240 "#a32030")
+    (cons 260 "#9d0006")
+    (cons 280 "#9a2021")
+    (cons 300 "#97413c")
+    (cons 320 "#946258")
+    (cons 340 "#504945")
+    (cons 360 "#504945")))
+ '(vc-annotate-very-old-color nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(command-log-command ((t (:foreground "firebrick"))))
+ '(command-log-key ((t (:foreground "dark magenta"))))
+ '(lsp-face-highlight-read ((t (:background nil :weight bold)))))
+)

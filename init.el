@@ -396,10 +396,10 @@ It should only modify the values of Spacemacs settings."
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
 
-   dotspacemacs-themes '(doom-gruvbox-light
+   dotspacemacs-themes '(kaolin-valley-dark
+                         doom-gruvbox-light
                          doom-solarized-light
                          doom-sourcerer
-                         kaolin-valley-dark
                          doom-solarized-dark
                          spacemacs-light
                          spacemacs-dark)
@@ -650,13 +650,6 @@ It should only modify the values of Spacemacs settings."
 
    ;; Show trailing whitespace (default t)
    dotspacemacs-show-trailing-whitespace nil
-
-   ;; Delete whitespace while saving buffer. Possible values are `all'
-   ;; to aggressively delete empty line and long sequences of whitespace,
-   ;; `trailing' to delete only the whitespace at end of lines, `changed' to
-   ;; delete only whitespace for changed lines or `nil' to disable cleanup.
-   ;; (default nil)
-   dotspacemacs-whitespace-cleanup 'all
 
    ;; If non nil activate `clean-aindent-mode' which tries to correct
    ;; virtual indentation of simple modes. This can interfer with mode specific
@@ -933,10 +926,8 @@ before packages are loaded."
   ;; Org-reveal - define were reveal.js files can be found
   ;; (I place reveal.js files in same directory as I write the org files)
   (setq org-reveal-root "")
-  ;;
-  ;; Define the location of the file to hold tasks
-  (with-eval-after-load 'org
-    (setq org-default-notes-file "~/Dropbox/todo-list.org"))
+
+
   ;;
   ;; Define a kanban style set of stages for todo tasks
   (with-eval-after-load 'org
@@ -1360,10 +1351,16 @@ This function is called at the very end of Spacemacs initialization."
    '("0769aa1641a0dcd5043e37ab22c401da838ff30b015da104c87cce1573d4c3ef" "d9a28a009cda74d1d53b1fbd050f31af7a1a105aa2d53738e9aa2515908cac4c" default))
  '(evil-want-Y-yank-to-eol nil)
  '(fci-rule-color "#504945")
+ '(global-spacemacs-whitespace-cleanup-mode nil)
+ '(global-visual-line-mode t)
  '(jdee-db-active-breakpoint-face-colors (cons "#f0f0f0" "#a89984"))
  '(jdee-db-requested-breakpoint-face-colors (cons "#f0f0f0" "#79740e"))
  '(jdee-db-spec-breakpoint-face-colors (cons "#f0f0f0" "#928374"))
  '(objed-cursor-color "#9d0006")
+ '(org-agenda-files '("~/org-roam/" "~/org-roam/daily/" "~/org-roam/wantto/"))
+ '(org-default-notes-file "~/org-roam/todo")
+ '(org-directory "~/org-roam")
+ '(org-startup-indented t)
  '(package-selected-packages
    '(vmd-mode lsp-ui lsp-treemacs cfrs posframe lsp-origami origami keycast helm-lsp lsp-mode zetteldeft yasnippet-snippets yaml-mode xterm-color ws-butler writeroom-mode winum which-key web-mode web-beautify vterm volatile-highlights vi-tilde-fringe valign uuidgen use-package unkillable-scratch unicode-fonts undo-tree treemacs-projectile treemacs-persp treemacs-magit treemacs-icons-dired treemacs-evil toc-org terminal-here tagedit symon symbol-overlay string-inflection spaceline-all-the-icons smeargle slim-mode shell-pop scss-mode sass-mode restart-emacs ranger rainbow-mode rainbow-identifiers rainbow-delimiters pug-mode prettier-js popwin persistent-scratch pcre2el password-generator paradox ox-twbs ox-gfm overseer orgit org-superstar org-roam org-rich-yank org-re-reveal org-projectile org-present org-pomodoro org-mime org-journal org-download org-cliplink org-brain open-junk-file nodejs-repl nameless multi-term move-text mmm-mode markdown-toc magit-svn magit-section magit-gitflow macrostep lorem-ipsum livid-mode link-hint ligature kaolin-themes json-navigator json-mode js2-refactor js-doc indent-guide impatient-mode hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-purpose helm-projectile helm-org-rifle helm-org helm-mode-manager helm-make helm-ls-git helm-gitignore helm-git-grep helm-flx helm-descbinds helm-css-scss helm-company helm-cider helm-c-yasnippet helm-ag grip-mode graphviz-dot-mode google-translate golden-ratio gnuplot gitignore-templates github-search github-clone gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gist gh-md fuzzy forge font-lock+ flyspell-correct-helm flycheck-pos-tip flycheck-package flycheck-elsa flycheck-clj-kondo flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-vimish-fold evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-easymotion evil-cleverparens evil-args evil-anzu eshell-z eshell-prompt-extras esh-help emr emojify emoji-cheat-sheet-plus emmet-mode elisp-slime-nav editorconfig dumb-jump dotenv-mode doom-themes doom-modeline dired-quick-sort diminish diff-hl devdocs define-word csv-mode company-web company-statistics company-quickhelp company-emoji command-log-mode column-enforce-mode color-identifiers-mode clojure-snippets clean-aindent-mode cider-eval-sexp-fu centered-cursor-mode browse-at-remote auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile aggressive-indent adoc-mode ace-link ace-jump-helm-line ac-ispell))
  '(pdf-view-midnight-colors (cons "#282828" "#fbf1c7"))

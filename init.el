@@ -878,11 +878,7 @@ before packages are loaded."
   ;; Define the location of the file to hold tasks
   (with-eval-after-load 'org
     (setq org-default-notes-file "~/Documents/OrgMode/todo-list.org"))
-  ;;
-  ;; Define a kanban style set of stages for todo tasks
-  (with-eval-after-load 'org
-    (setq org-todo-keywords
-         '((sequence "TODO" "DOING" "BLOCKED" "REVIEW" "|" "DONE" "ARCHIVED"))))
+  
   ;;
   ;; The default keywords all use the same colour.
   ;; Make the states easier to distinguish by using different colours
@@ -1653,9 +1649,9 @@ This function is called at the very end of Spacemacs initialization."
  '(org-roam-mode t nil (org-roam))
  '(org-todo-keywords
    '((sequence "TODO" "DOING" "BLOCKED" "REVIEW" "|" "DONE" "ARCHIVED")
-     (sequence "WANTTO" "SPEC" "FINDOUT" "DECIDE" "HOWTO" "TRY" "FAILED" "GOTO" "DO")
-     (sequence "STORY" "TASK" "BUG" "|" "FIXED" "DONE" "WONTDO")
-     (sequence "QUESTION" "|" "ANSWER" "REFERENCE")))
+     (sequence "WANTTO(w)" "SPEC" "FINDOUT" "DECIDE" "HOWTO" "TRY" "FAILED" "GOTO" "DO")
+     (sequence "STORY(s)" "TASK" "BUG" "|" "FIXED" "DONE" "WONTDO")
+     (sequence "QUESTION(q)" "|" "ANSWER" "REFERENCE")))
  '(package-selected-packages
    '(org-roam-server org-roam-bibtex org-roam tern nodejs-repl livid-mode skewer-mode js2-refactor multiple-cursors js2-mode js-doc import-js grizzl helm-gtags ggtags dap-mode lsp-treemacs bui lsp-mode cfrs posframe counsel-gtags counsel swiper ivy add-node-modules-path zetteldeft yasnippet-snippets yaml-mode xterm-color ws-butler writeroom-mode winum which-key web-mode web-beautify vterm volatile-highlights vi-tilde-fringe valign uuidgen use-package unkillable-scratch unicode-fonts undo-tree treemacs-projectile treemacs-persp treemacs-magit treemacs-icons-dired treemacs-evil toc-org terminal-here tagedit symon symbol-overlay string-inflection spaceline-all-the-icons smeargle slim-mode shell-pop scss-mode sass-mode restart-emacs ranger rainbow-mode rainbow-identifiers rainbow-delimiters pug-mode prettier-js popwin persistent-scratch pcre2el password-generator paradox ox-twbs ox-gfm overseer orgit org-superstar org-rich-yank org-re-reveal org-projectile org-present org-pomodoro org-mime org-journal org-download org-cliplink org-brain open-junk-file nameless multi-term move-text mmm-mode markdown-toc magit-svn magit-section magit-gitflow macrostep lorem-ipsum link-hint ligature kaolin-themes json-navigator json-mode indent-guide impatient-mode hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-purpose helm-projectile helm-org-rifle helm-org helm-mode-manager helm-make helm-ls-git helm-gitignore helm-git-grep helm-flx helm-descbinds helm-css-scss helm-company helm-cider helm-c-yasnippet helm-ag grip-mode graphviz-dot-mode google-translate golden-ratio gnuplot gitignore-templates github-search github-clone gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gist gh-md fuzzy forge font-lock+ flyspell-correct-helm flycheck-pos-tip flycheck-package flycheck-elsa flycheck-clj-kondo flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-vimish-fold evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-easymotion evil-cleverparens evil-args evil-anzu eshell-z eshell-prompt-extras esh-help emr emojify emoji-cheat-sheet-plus emmet-mode elisp-slime-nav editorconfig dumb-jump dotenv-mode doom-themes doom-modeline dired-quick-sort diminish diff-hl devdocs define-word csv-mode company-web company-statistics company-quickhelp company-emoji command-log-mode column-enforce-mode color-identifiers-mode clojure-snippets clean-aindent-mode cider-eval-sexp-fu centered-cursor-mode browse-at-remote auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile aggressive-indent adoc-mode ace-link ace-jump-helm-line ac-ispell)))
 (custom-set-faces

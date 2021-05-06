@@ -1633,6 +1633,13 @@ This function is called at the very end of Spacemacs initialization."
  '(deft-directory "~/org-roam")
  '(org-agenda-files
    '("~/org-roam/" "~/Documents/OrgMode/" "~/org-roam/daily/" "~/org-roam/wantto/"))
+ '(org-babel-load-languages
+   '((shell . t)
+     (dot . t)
+     (clojure . t)
+     (js . t)
+     (emacs-lisp . t)
+     (python . t)))
  '(org-capture-after-finalize-hook '(org-roam-db-build-cache org-roam-buffer-update))
  '(org-directory "~/org-roam/")
  '(org-refile-allow-creating-parent-nodes 'confirm)

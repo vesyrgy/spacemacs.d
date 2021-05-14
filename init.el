@@ -771,11 +771,6 @@ before packages are loaded."
   ;; Over-ride Spacemacs defaults
   ;;
   ;;
-  ;; Set new location for file bookmarks, SPC f b
-  ;; Default: ~/.emacs.d/.cache/bookmarks
-  (setq bookmark-default-file "~/.spacemacs.d/bookmarks")
-  ;;
-  ;;
   ;; native line numbers taking up lots of space?
   (setq-default display-line-numbers-width nil)
   ;;

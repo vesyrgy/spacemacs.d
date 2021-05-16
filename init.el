@@ -117,7 +117,7 @@ This function should only modify configuration layer settings."
            helm-follow-mode-persistent t)
 
      html
-     ;; javascript
+     javascript
      json
 
      ;; Clojure specific configuration in dotspacemacs/user-config
@@ -159,7 +159,7 @@ This function should only modify configuration layer settings."
           org-journal-carryover-items "TODO=\"TODO\"|TODO=\"DOING\"|TODO=\"BLOCKED\"|TODO=\"REVIEW\"")
 
      ;; Org Roam
-     org-roam
+     ;; org-roam
 
      ;; Text-based file manager with preview
      ;; SPC a r

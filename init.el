@@ -1601,47 +1601,6 @@ before packages are loaded."
   )   ;; End of dot-spacemacs/user-config
 
 
-;; Do not write anything past this comment. This is where Emacs will
-;; auto-generate custom variable definitions.
-(defun dotspacemacs/emacs-custom-settings ()
-  "Emacs custom settings.
-This is an auto-generated function, do not modify its content directly, use
-Emacs customize menu instead.
-This function is called at the very end of Spacemacs initialization."
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(after-save-hook
-   '(rmail-after-save-hook doom-modeline-update-vcs-text doom-modeline-update-vcs-icon doom-modeline-update-buffer-file-name org-roam-db-build-cache org-roam-buffer-update))
- '(auto-save-visited-interval 1)
- '(deft-directory "~/org-roam")
- '(org-agenda-files
-   '("~/org-roam/" "~/Documents/OrgMode/" "~/org-roam/daily/" "~/org-roam/wantto/"))
- '(org-babel-load-languages
-   '((shell . t)
-     (dot . t)
-     (clojure . t)
-     (js . t)
-     (emacs-lisp . t)
-     (python . t)))
- '(org-capture-after-finalize-hook '(org-roam-db-build-cache org-roam-buffer-update))
- '(org-directory "~/org-roam/")
- '(org-refile-allow-creating-parent-nodes 'confirm)
- '(org-refile-targets
-   '((org-agenda-files :tag . "refile_target")
-     (org-agenda-files :todo . "FAILED")))
- '(org-refile-use-outline-path t)
- '(org-roam-capture-after-find-file-hook '(org-roam-db-build-cache org-roam-buffer-update))
- '(org-roam-db-update-idle-seconds 1)
- '(org-roam-db-update-method 'immediate)
- '(org-roam-mode t nil (org-roam))
- '(org-todo-keywords
-   '((sequence "TODO" "DOING" "BLOCKED" "REVIEW" "|" "DONE" "ARCHIVED")
-     (sequence "WANTTO(w)" "SPEC" "FINDOUT" "DECIDE" "HOWTO" "TRY" "FAILED" "GOTO" "DO")
-     (sequence "STORY(s)" "TASK" "BUG" "|" "FIXED" "DONE" "WONTDO")
-     (sequence "QUESTION(q)" "|" "ANSWER" "REFERENCE")))
- )
 
-)
+
+

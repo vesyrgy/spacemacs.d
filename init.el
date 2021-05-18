@@ -1616,7 +1616,11 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  '(after-save-hook
    '(rmail-after-save-hook doom-modeline-update-vcs-text doom-modeline-update-vcs-icon doom-modeline-update-buffer-file-name org-roam-db-build-cache org-roam-buffer-update))
+ '(auto-save-default nil)
+ '(auto-save-interval 30)
+ '(auto-save-timeout nil)
  '(auto-save-visited-interval 1)
+ '(deft-auto-save-interval 0.0)
  '(deft-directory "~/org-roam")
  '(org-agenda-files
    '("~/org-roam/" "~/Documents/OrgMode/" "~/org-roam/daily/" "~/org-roam/wantto/"))

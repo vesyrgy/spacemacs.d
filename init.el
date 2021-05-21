@@ -1614,7 +1614,6 @@ This function is called at the very end of Spacemacs initialization."
  '(after-save-hook
    '(rmail-after-save-hook doom-modeline-update-vcs-text doom-modeline-update-vcs-icon doom-modeline-update-buffer-file-name org-roam-db-build-cache org-roam-buffer-update))
  '(auto-save-default nil)
- '(auto-save-timeout nil)
  '(auto-save-visited-interval 1)
  '(auto-save-visited-mode t)
  '(deft-auto-save-interval 0.0)

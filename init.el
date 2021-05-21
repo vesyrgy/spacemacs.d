@@ -921,9 +921,6 @@ before packages are loaded."
   ;; Turn on visual-line-mode for Org-mode only
   (add-hook 'org-mode-hook 'turn-on-visual-line-mode)
   ;;
-  (setq-default auto-save-visited-mode t)
-  (setq-default auto-save-interval '1)
-  (setq-default auto-save-timeout '1)
   ;; use org-re-reveal instead of org-reveal (which hasnt been updated in ages and breaks org-mode 9.2)
   ;; (use-package org-re-reveal :after org)
   ;;
@@ -1617,9 +1614,9 @@ This function is called at the very end of Spacemacs initialization."
  '(after-save-hook
    '(rmail-after-save-hook doom-modeline-update-vcs-text doom-modeline-update-vcs-icon doom-modeline-update-buffer-file-name org-roam-db-build-cache org-roam-buffer-update))
  '(auto-save-default nil)
- '(auto-save-interval 30)
  '(auto-save-timeout nil)
  '(auto-save-visited-interval 1)
+ '(auto-save-visited-mode t)
  '(deft-auto-save-interval 0.0)
  '(deft-directory "~/org-roam")
  '(org-agenda-files
@@ -1645,7 +1642,7 @@ This function is called at the very end of Spacemacs initialization."
  '(org-roam-db-update-method 'immediate)
  '(org-todo-keywords
    '((sequence "TODO" "DOING" "BLOCKED" "REVIEW" "|" "DONE" "ARCHIVED")
-     (sequence "WANTTO(w)" "SPEC" "FINDOUT" "DECIDE" "HOWTO" "TRY" "FAILED" "GOTO" "DO")
+     (sequence "WANTTO(w)" "SPEC" "FINDOUT" "DECIDE" "HOWTO" "TRY" "OBSERVE" "FAILED" "GOTO" "DO")
      (sequence "STORY(s)" "TASK" "BUG" "|" "FIXED" "DONE" "WONTDO")
      (sequence "QUESTION(q)" "|" "ANSWER" "REFERENCE")))
  '(package-selected-packages

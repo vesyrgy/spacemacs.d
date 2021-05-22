@@ -1629,7 +1629,6 @@ This function is called at the very end of Spacemacs initialization."
      (python . t)
      (haskell . t)
      (css . t)
-     (js . t)
      (latex . t)))
  '(org-directory "~/org-roam/")
  '(org-refile-allow-creating-parent-nodes 'confirm)

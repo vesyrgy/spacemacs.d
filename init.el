@@ -93,7 +93,8 @@ This function should only modify configuration layer settings."
      ;; show word-granularity differences in current diff hunk
      (git :variables
           git-magit-status-fullscreen t
-          magit-diff-refine-hunk t)
+          magit-diff-refine-hunk t
+          git-enable-magit-todos-plugin t)
 
      ;; SPC g h to use GitHub repositories
      ;; SPC g g to use GitHub Gists
@@ -117,25 +118,34 @@ This function should only modify configuration layer settings."
      ;; https://practicalli.github.io/spacemacs/install-spacemacs/clojure-lsp/lsp-variables-reference.html
      (lsp :variables
           ;; Formatting and indentation - use Cider instead
-          lsp-enable-on-type-formatting nil
+          lsp-enable-on-type-formatting t
           ;; Set to nil to use CIDER features instead of LSP UI
-          lsp-enable-indentation nil
+          lsp-enable-indentation t
+          lsp-enable-snippet t  ;; to test again
 
           ;; symbol highlighting - `lsp-toggle-symbol-highlight` toggles highlighting
           ;; subtle highlighting for doom-gruvbox-light theme defined in dotspacemacs/user-config
           lsp-enable-symbol-highlighting t
 
-          ;; Show lint error indicator in the mode-bar (tested on doom-modeline)
+          ;; Show lint error indicator in the mode line
           lsp-modeline-diagnostics-enable t
+          ;; lsp-modeline-diagnostics-scope :workspace
 
           ;; popup documentation boxes
           ;; lsp-ui-doc-enable nil          ;; disable all doc popups
           lsp-ui-doc-show-with-cursor nil   ;; doc popup for cursor
           ;; lsp-ui-doc-show-with-mouse t   ;; doc popup for mouse
-          lsp-ui-doc-delay 2                ;; delay in seconds for popup to display
+          ;; lsp-ui-doc-delay 2                ;; delay in seconds for popup to display
+          lsp-ui-doc-include-signature t    ;; include function signature
+          ;; lsp-ui-doc-position 'at-point  ;; top bottom at-point
+          lsp-ui-doc-alignment 'window      ;; frame window
 
           ;; code actions and diagnostics text as right-hand side of buffer
           lsp-ui-sideline-enable nil
+          lsp-ui-sideline-show-code-actions nil
+          ;; lsp-ui-sideline-delay 500
+
+          ;; lsp-ui-sideline-show-diagnostics nil
 
           ;; reference count for functions (assume their maybe other lenses in future)
           lsp-lens-enable t
@@ -144,7 +154,8 @@ This function should only modify configuration layer settings."
           treemacs-space-between-root-nodes nil
 
           ;; Optimization for large files
-          lsp-file-watch-threshold 10000)
+          lsp-file-watch-threshold 10000
+          lsp-log-io nil)
 
      (markdown :variables
                markdown-live-preview-engine 'vmd)
@@ -377,6 +388,12 @@ It should only modify the values of Spacemacs settings."
 
    ;; True if the home buffer should respond to resize events. (default t)
    dotspacemacs-startup-buffer-responsive t
+
+   ;; Show numbers before the startup list lines. (default t)
+   dotspacemacs-show-startup-list-numbers t
+
+   ;; The minimum delay in seconds between number key presses. (default 0.4)
+   dotspacemacs-startup-buffer-multi-digit-delay 0.4
 
    ;; Default major mode for a new empty buffer. Possible values are mode
    ;; names such as `text-mode'; and `nil' to use Fundamental mode.
@@ -654,7 +671,7 @@ It should only modify the values of Spacemacs settings."
    ;; performance issues, instead of calculating the frame title by
    ;; `spacemacs/title-prepare' all the time.
    ;; (default "%I@%S")
-   dotspacemacs-frame-title-format "%I@%S: %a"
+   dotspacemacs-frame-title-format nil
 
    ;; Format specification for setting the icon title format
    ;; (default nil - same as frame-title-format)
@@ -749,6 +766,15 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+
+
+
+  ;; LSP  hacking
+  (setq lsp-ui-sideline-enable nil)
+  ;; (setq lsp-ui-sideline-show-code-actions nil)
+
+  (setq lsp-modeline-diagnostics-scope :workspace)
+
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; Keeping Helm history clean
   (setq history-delete-duplicates t)
@@ -1010,7 +1036,7 @@ before packages are loaded."
 
   ;; Auto-indent code automatically
   ;; https://emacsredux.com/blog/2016/02/07/auto-indent-your-code-with-aggressive-indent-mode/
-  (add-hook 'clojure-mode-hook #'aggressive-indent-mode)
+  ;; (add-hook 'clojure-mode-hook #'aggressive-indent-mode)
 
   ;; Lookup functions in Clojure - The Essentail Reference book
   ;; https://github.com/p3r7/clojure-essential-ref
